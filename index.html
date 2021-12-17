@@ -12,21 +12,29 @@
     <div class="section">
         <div class="container">
             <article>
+                <h1 class="title"></h1>
+                <!--SELECTORES TITLE-CRUD-FROM-CRUD-TABLE-ID-TEMPLATE -->
+
                 <form class="crud-form">
-                    <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                    <input type="text" name="nombre" required>
+                    <br><br>
+                    <input type="text" name="constelacion" required>
+                    <input type="hidden" name="id">
                     <br>
-                    <input type="text" name="constelacion">
+                    <input type="submit" value="enviar">
                 </form>
                 <br>
-                <button type="submit">Enviar</button>
+
             </article>
             <article>
+                <!--Tabla crud-tabla-->
                 <table class="crud-table">
                     <thead>
                         <tr>
-                            <th>id</th>
                             <th>nombre</th>
                             <th>constelacion</th>
+                            <th>acciones</th>
+
 
                         </tr>
                     </thead>
@@ -41,7 +49,7 @@
             </article>
         </div>
     </div>
-
+    <!--crud-template-->
     <template id="crud-template">
         <tr>
             <td class="name"></td>
@@ -52,5 +60,8 @@
         </tr>
     </template>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
+
 
 </html>
